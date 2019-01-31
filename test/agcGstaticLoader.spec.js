@@ -39,8 +39,8 @@ describe ('gstatic loader strategy provider implementation', function(){
             agcScriptTagHelperBackend.expect('https://www.gstatic.com/charts/loader.js');
             agcScriptTagHelperBackend.when('https://www.gstatic.com/charts/loader.js').succeed();
 
-            agcScriptTagHelperBackend.expect('https://www.google.com/jsapi');
-            agcScriptTagHelperBackend.when('https://www.google.com/jsapi').succeed();
+            agcScriptTagHelperBackend.expect('https://www.gstatic.com/charts/loader.js');
+            agcScriptTagHelperBackend.when('https://www.gstatic.com/charts/loader.js').succeed();
         });
 
         it('had useBothLoaders() called', function(){

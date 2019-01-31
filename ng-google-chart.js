@@ -345,7 +345,7 @@
 
             var tagPromise = agcScriptTagHelper("https://www.gstatic.com/charts/loader.js");
             if (useBothLoaders)
-                tagPromise = tagPromise.then(function(){ return agcScriptTagHelper("https://www.google.com/jsapi");});
+                tagPromise = tagPromise.then(function(){ return agcScriptTagHelper("https://www.gstatic.com/charts/loader.js");});
             var libraryPromise = tagPromise.then(scriptLoadCallback);
 
             return libraryPromise;
@@ -382,7 +382,7 @@
         settings = angular.extend({}, googleChartApiConfig.optionalSettings, settings);
 
         $log.debug("[AGC] Calling tag helper...");
-        agcScriptTagHelper("https://www.google.com/jsapi")
+        agcScriptTagHelper("https://www.gstatic.com/charts/loader.js")
             .then(function(){
                 $log.debug("[AGC] Tag helper returned success.");
                 window.google.load('visualization', googleChartApiConfig.version || '1', settings);

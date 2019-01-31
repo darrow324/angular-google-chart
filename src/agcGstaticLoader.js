@@ -99,7 +99,7 @@
 
             var tagPromise = agcScriptTagHelper("https://www.gstatic.com/charts/loader.js");
             if (useBothLoaders)
-                tagPromise = tagPromise.then(function(){ return agcScriptTagHelper("https://www.google.com/jsapi");});
+                tagPromise = tagPromise.then(function(){ return agcScriptTagHelper("https://www.gstatic.com/charts/loader.js");});
             var libraryPromise = tagPromise.then(scriptLoadCallback);
 
             return libraryPromise;
